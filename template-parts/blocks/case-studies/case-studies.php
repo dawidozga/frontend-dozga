@@ -29,6 +29,15 @@ $case_studies = get_field('bcs_case_study');
 
 if ($case_studies) {
 ?>
+    <div class="filter">
+        <ul class="filter__menu">
+            <li id="casestudy" class="filter__title active">All</li>
+            <li id="e-commerce" class="filter__title">E-Commerce</li>
+            <li id="websites" class="filter__title">Websites</li>
+            <li id="design" class="filter__title">Design</li>
+            <li id="seo" class="filter__title">SEO</li>
+        </ul>
+    </div>
     <div class="casestudies">
         <?php
         foreach ($case_studies as $case_study) {
