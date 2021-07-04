@@ -7,3 +7,5 @@
 3. Then type: npm run prod
 
 4. Enjoy!
+
+**Finished project:** http://frontend-dozga.ultrakom.hekko24.pl/
