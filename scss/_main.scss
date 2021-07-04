@@ -1,0 +1,77 @@
+@import 'variables';
+@import 'mixins';
+
+.casestudies {
+    @include media-min(sm) {
+        column-count: 2;
+        column-gap: 30px;
+    }
+}
+    
+.casestudy {
+    margin-bottom: 70px;
+    
+    @include media-min(sm) {
+        break-inside: avoid-column;
+    }
+
+    &__photo img {
+        width: 100%
+    }
+
+    &__text {
+        padding: 8%;
+    }
+
+    &__type {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 12px 0 25.5px;
+    }
+
+    &__link {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            @include absolute(auto,0,-6px,0);
+            height: 4px;
+        }
+
+        &:before {
+            background: $primary-color;
+        }
+
+        &:after {
+            background: $font-color;
+            transition: $transition;
+            width: 0;
+
+            @keyframes linkMove {
+                from {width: 0;}
+                to {width: 100%;}
+            }
+        }
+
+        &:hover {
+            &:after {
+                animation: linkMove 1.3s infinite;
+            }
+        }
+    }
+}
