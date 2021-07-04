@@ -7,6 +7,40 @@
         column-gap: 30px;
     }
 }
+
+.filter {
+    padding: 50px 0;
+    margin-top: 25px;
+    
+    &__menu {
+        margin: 0;
+        list-style: none;
+        padding: 0 3.5%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 3.5px 18px;
+        margin-bottom: 6px;
+        margin-right: 4.5%;
+        transition: background $transition;
+        cursor: pointer;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &.active,
+        &:hover {
+            background: $primary-color;
+        }
+    }
+}
     
 .casestudy {
     margin-bottom: 70px;
