@@ -1,3 +1,5 @@
+"use strict";
+
 import '../scss/style.scss';
 
 ( function( $ ) {
@@ -16,13 +18,13 @@ import '../scss/style.scss';
 
         function filterCaseStudies(item) {
             changeActivePosition(item);
-            for (let i = 0; i < allCaseStudies.length; i++) {
-                if (allCaseStudies[i].classList.contains($(item).attr('id'))) {
-                    $(allCaseStudies[i]).css('display', 'block');
+			for (const caseStudy of allCaseStudies) {
+				if(caseStudy.classList.contains($(item).attr('id'))) {
+                    $(caseStudy).css('display', 'block');
                 } else {
-                    $(allCaseStudies[i]).css('display', 'none');
+                    $(caseStudy).css('display', 'none');
                 }
-            }
+			}
         }
 
         function changeActivePosition(item) {
