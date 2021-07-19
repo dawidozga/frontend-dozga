@@ -1,6 +1,3 @@
-@import 'variables';
-@import 'mixins';
-
 .casestudies {
     @include media-min(sm) {
         column-count: 2;
